@@ -18,7 +18,7 @@ function App() {
   // Obtener datos de la db
   useEffect(() => {
     const obtenerDatos = async () => {
-      const data = await getDocs(collection(db, 'taskList'));
+      const data = await getDocs(collection(db, 'tasks'));
       const arrayData = data.docs.map((doc) => {
         return { id: doc.id, ...doc.data() };
       });
